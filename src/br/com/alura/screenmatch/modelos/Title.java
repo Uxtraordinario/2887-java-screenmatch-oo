@@ -4,15 +4,10 @@ public class Title {
     public String name;
     public int launchDate;
     public boolean Media;
-    public String getTotalSummarize;
     private boolean included;
     private double summarize;
-    private int totalSummarize;
+    public int totalSummarize;
     public int minutesOfStream;
-
-    public int getTotalSummarize(){
-        return getTotalSummarize();
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -27,7 +22,7 @@ public class Title {
     }
 
     public void showUpValues(){
-        System.out.println("Movie br.com.alura.screenmatch.modelos.Title: " + name);
+        System.out.println("Movie Title: " + name);
         System.out.println("Year of launch: " + launchDate);
     }
 
@@ -38,5 +33,14 @@ public class Title {
 
     public double getMedia(){
         return summarize / totalSummarize;
+    }
+
+    public String setMinutesOfStream() {
+        this.minutesOfStream = minutesOfStream;
+        return String.valueOf(minutesOfStream);
+    }
+
+    public int getMinutesOfStream() {
+        return minutesOfStream;
     }
 }

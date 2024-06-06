@@ -12,6 +12,6 @@ public class Movie extends Title {
     }
 
     Series BigBangTheory = new Series();
-    BigBangTheory.setname("BigBandTheory");
+   // BigBangTheory.setname("BigBandTheory");
 }
 

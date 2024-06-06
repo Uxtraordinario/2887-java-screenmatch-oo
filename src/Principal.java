@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.modelos.Movie;
+import br.com.alura.screenmatch.modelos.Series;
 
 public class Principal {
     public static void main(String[] args) {
@@ -6,6 +7,9 @@ public class Principal {
         myMovie.setName("The godfather");
         myMovie.setLaunchDate(1970);
         myMovie.setMinutesOfStream(180);
+        System.out.println("Minutes of Stream: " + myMovie.setMinutesOfStream());
+
+
 
         myMovie.showUpValues();
 
@@ -17,8 +21,17 @@ public class Principal {
         myMovie.feedback(6);
         myMovie.feedback(9);
 
-        System.out.println("Total of Feedbacks:" + myMovie.getTotalSummarize);
+        System.out.println("Total of Feedbacks:" );
         System.out.println(myMovie.Media);
+
+        Series lost = new Series();
+        lost.setName("Lost");
+        lost.setLaunchDate(2000);
+        lost.showUpValues();
+        lost.setSeriesSeasons(12);
+        lost.setEpisodesPerSeason(12);
+        lost.setMinutesPerEpisode(50);
+        System.out.println("Minutes Duration: " + lost.getMinutesOfStream());
 
     }
 }
