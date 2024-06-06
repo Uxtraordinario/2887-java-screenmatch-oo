@@ -1,17 +1,24 @@
+import br.com.alura.screenmatch.modelos.Movie;
+
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
+        Movie myMovie = new Movie();
+        myMovie.setName("The godfather");
+        myMovie.setLaunchDate(1970);
+        myMovie.setMinutesOfStream(180);
 
-        meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(5);
-        meuFilme.avalia(10);
-        System.out.println(meuFilme.somaDasAvaliacoes);
-        System.out.println(meuFilme.totalDeAvaliacoes);
-        System.out.println(meuFilme.pegaMedia());
+        myMovie.showUpValues();
+
+        myMovie.feedback(9);
+        myMovie.feedback(8);
+        myMovie.feedback(10);
+        myMovie.feedback(7);
+        myMovie.feedback(10);
+        myMovie.feedback(6);
+        myMovie.feedback(9);
+
+        System.out.println("Total of Feedbacks:" + myMovie.getTotalSummarize);
+        System.out.println(myMovie.Media);
 
     }
 }
