@@ -1,7 +1,10 @@
+import br.com.alura.screenmatch.calculo.Summarize;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Series;
 
 public class Principal {
+
+
     public static void main(String[] args) {
         Movie myMovie = new Movie();
         myMovie.setName("The godfather");
@@ -33,5 +36,18 @@ public class Principal {
         lost.setMinutesPerEpisode(50);
         System.out.println("Minutes Duration: " + lost.getMinutesOfStream());
 
+        Movie anotherMovie = new Movie();
+        anotherMovie.setName("Superhero Movie");
+        anotherMovie.setLaunchDate(2002);
+        anotherMovie.setMinutesOfStream(180);
+
+        Summarize calculator = new Summarize();
+        calculator.include(myMovie);
+        calculator.include(anotherMovie);
+        calculator.include(lost);
+        System.out.println( calculator.getTotalTime());
+
+
     }
+
 }
