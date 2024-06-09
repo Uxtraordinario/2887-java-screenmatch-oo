@@ -1,4 +1,6 @@
+import br.com.alura.screenmatch.calculo.FilterForYou;
 import br.com.alura.screenmatch.calculo.Summarize;
+import br.com.alura.screenmatch.modelos.Episode;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Series;
 
@@ -47,6 +49,14 @@ public class Principal {
         calculator.include(lost);
         System.out.println( calculator.getTotalTime());
 
+        FilterForYou filter = new FilterForYou();
+        filter.Filter(myMovie);
+
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setSerie(lost);
+        episode.setTotalViews(300);
+        filter.Filter(episode);
 
     }
 
