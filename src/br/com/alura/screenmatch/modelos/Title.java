@@ -43,4 +43,8 @@ public class Title {
     public int getMinutesOfStream() {
         return minutesOfStream;
     }
+
+    public String getName() {
+        return name;
+    }
 }

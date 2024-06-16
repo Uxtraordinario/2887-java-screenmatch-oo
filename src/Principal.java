@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episode;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Series;
 
+import java.util.ArrayList;
+
 public class Principal {
 
 
@@ -57,6 +59,20 @@ public class Principal {
         episode.setSerie(lost);
         episode.setTotalViews(300);
         filter.Filter(episode);
+
+        Movie otherMovie = new Movie();
+        otherMovie.setName("Shrek");
+        otherMovie.setLaunchDate(2007);
+        otherMovie.setMinutesOfStream(160);
+
+        ArrayList<Movie> movielist = new ArrayList<>();
+        movielist.add(myMovie);
+        movielist.add(anotherMovie);
+        movielist.add(otherMovie);
+        System.out.println("List lenght: " + movielist.size());
+        System.out.println("First Movie: " + movielist.get(0).getName());
+        System.out.println("Second Movie: " + movielist.get(1).getName());
+        System.out.println("Third: " + movielist.get(2).getName());
 
     }
 
