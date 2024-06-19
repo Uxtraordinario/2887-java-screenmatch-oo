@@ -31,8 +31,7 @@ public class Principal {
         System.out.println("Total of Feedbacks:" );
         System.out.println(myMovie.Media);
 
-        Series lost = new Series();
-        lost.setName("Lost");
+        Series lost = new Series("Lost");
         lost.setLaunchDate(2000);
         lost.showUpValues();
         lost.setSeriesSeasons(12);
@@ -40,8 +39,7 @@ public class Principal {
         lost.setMinutesPerEpisode(50);
         System.out.println("Minutes Duration: " + lost.getMinutesOfStream());
 
-        Movie anotherMovie = new Movie();
-        anotherMovie.setName("Superhero Movie");
+        Movie anotherMovie = new Movie("Superhero Movie");
         anotherMovie.setLaunchDate(2002);
         anotherMovie.setMinutesOfStream(180);
 
@@ -60,8 +58,7 @@ public class Principal {
         episode.setTotalViews(300);
         filter.Filter(episode);
 
-        Movie otherMovie = new Movie();
-        otherMovie.setName("Shrek");
+        Movie otherMovie = new Movie("Shrek");
         otherMovie.setLaunchDate(2007);
         otherMovie.setMinutesOfStream(160);
 
@@ -73,6 +70,8 @@ public class Principal {
         System.out.println("First Movie: " + movielist.get(0).getName());
         System.out.println("Second Movie: " + movielist.get(1).getName());
         System.out.println("Third: " + movielist.get(2).getName());
+        System.out.println(movielist);
+        System.out.println("movie ToString " + movielist.get(0).toString());
 
     }
 

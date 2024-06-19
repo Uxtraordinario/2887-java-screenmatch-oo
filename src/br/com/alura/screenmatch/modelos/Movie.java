@@ -4,6 +4,14 @@ import br.com.alura.screenmatch.calculo.Categorie;
 public class Movie extends Title implements Categorie {
    private String director;
 
+    public Movie(String name) {
+        this.setName(name);
+    }
+
+    public Movie() {
+
+    }
+
     public void setDirector(String director) {
         this.director = director;
     }
@@ -12,12 +20,15 @@ public class Movie extends Title implements Categorie {
         return director;
     }
 
-    Series BigBangTheory = new Series();
 
     @Override
     public int getCategorie() {
         return (int) getMedia() / 2;
     }
-    // BigBangTheory.setname("BigBandTheory");
+
+    @Override
+    public String toString() {
+        return "Movie " + this.getName() + " (" + this.getYearOfRelease() + " )";
+    }
 }
 

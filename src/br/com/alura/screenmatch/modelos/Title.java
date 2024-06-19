@@ -8,6 +8,7 @@ public class Title {
     private double summarize;
     public int totalSummarize;
     public int minutesOfStream;
+    public int yearOfRelease;
 
     public void setName(String name) {
         this.name = name;
@@ -38,6 +39,14 @@ public class Title {
     public String setMinutesOfStream() {
         this.minutesOfStream = minutesOfStream;
         return String.valueOf(minutesOfStream);
+    }
+
+    public int getYearOfRelease() {
+        return yearOfRelease;
+    }
+
+    public void setYearOfRelease(int yearOfRelease) {
+        this.yearOfRelease = yearOfRelease;
     }
 
     public int getMinutesOfStream() {

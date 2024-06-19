@@ -5,6 +5,10 @@ public class Series extends Title {
     public int episodesPerSeason;
     public int minutesPerEpisode;
 
+    public Series(String name) {
+       this.setName(name);
+    }
+
 
     public void setSeriesSeasons(int seriesSeasons) {
         this.seriesSeasons = seriesSeasons;
