@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculo.FilterForYou;
 import br.com.alura.screenmatch.calculo.Summarize;
 import br.com.alura.screenmatch.modelos.Episode;
@@ -10,10 +12,7 @@ public class Principal {
 
 
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("The godfather");
-        myMovie.setLaunchDate(1970);
-        myMovie.setMinutesOfStream(180);
+        Movie myMovie = new Movie("The godfather", 1970, 180);
         System.out.println("Minutes of Stream: " + myMovie.setMinutesOfStream());
 
 
@@ -31,17 +30,13 @@ public class Principal {
         System.out.println("Total of Feedbacks:" );
         System.out.println(myMovie.Media);
 
-        Series lost = new Series("Lost");
-        lost.setLaunchDate(2000);
+        Series lost = new Series(2000, "lost", 50);
         lost.showUpValues();
         lost.setSeriesSeasons(12);
         lost.setEpisodesPerSeason(12);
-        lost.setMinutesPerEpisode(50);
         System.out.println("Minutes Duration: " + lost.getMinutesOfStream());
 
-        Movie anotherMovie = new Movie("Superhero Movie");
-        anotherMovie.setLaunchDate(2002);
-        anotherMovie.setMinutesOfStream(180);
+        Movie anotherMovie = new Movie("Superhero Movie", 2002, 180);
 
         Summarize calculator = new Summarize();
         calculator.include(myMovie);
@@ -58,9 +53,7 @@ public class Principal {
         episode.setTotalViews(300);
         filter.Filter(episode);
 
-        Movie otherMovie = new Movie("Shrek");
-        otherMovie.setLaunchDate(2007);
-        otherMovie.setMinutesOfStream(160);
+        Movie otherMovie = new Movie("Shrek", 2007, 160);
 
         ArrayList<Movie> movielist = new ArrayList<>();
         movielist.add(myMovie);

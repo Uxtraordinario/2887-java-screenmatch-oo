@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Title {
+public class Title implements Comparable<Title> {
     public String name;
     public int launchDate;
     public boolean Media;
@@ -9,6 +9,11 @@ public class Title {
     public int totalSummarize;
     public int minutesOfStream;
     public int yearOfRelease;
+
+    public Title(int launchDate, String name, int minutesOfStream) {
+        this.launchDate = launchDate;
+        this.name = name;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -32,6 +37,7 @@ public class Title {
         totalSummarize++;
     }
 
+
     public double getMedia(){
         return summarize / totalSummarize;
     }
@@ -41,12 +47,12 @@ public class Title {
         return String.valueOf(minutesOfStream);
     }
 
-    public int getYearOfRelease() {
-        return yearOfRelease;
+    public int getLaunchDate() {
+        return launchDate;
     }
 
-    public void setYearOfRelease(int yearOfRelease) {
-        this.yearOfRelease = yearOfRelease;
+    public void setlaunchDate(int launchDate) {
+        this.launchDate = launchDate;
     }
 
     public int getMinutesOfStream() {
@@ -55,5 +61,10 @@ public class Title {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Title o) {
+        return 0;
     }
 }

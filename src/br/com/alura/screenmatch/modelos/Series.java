@@ -5,8 +5,9 @@ public class Series extends Title {
     public int episodesPerSeason;
     public int minutesPerEpisode;
 
-    public Series(String name) {
-       this.setName(name);
+
+    public Series(int launchDate, String name, int minutesPerEpisode) {
+        super(launchDate, name, minutesPerEpisode);
     }
 
 
@@ -25,6 +26,11 @@ public class Series extends Title {
     @Override
     public int getMinutesOfStream() {
         return seriesSeasons * episodesPerSeason * minutesPerEpisode;
+    }
+
+    @Override
+    public String toString() {
+        return "Series " + this.getName() + " (" + this.launchDate + ") ";
     }
 
 
