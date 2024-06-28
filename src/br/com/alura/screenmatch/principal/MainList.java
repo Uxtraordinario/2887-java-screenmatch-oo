@@ -7,6 +7,8 @@ import br.com.alura.screenmatch.modelos.Title;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
 
 public class MainList extends Principal {
     public static void main(String[] args) {
@@ -39,8 +41,11 @@ public class MainList extends Principal {
         searchForStudios.add("Pixar");
         searchForStudios.add("Disney");
         searchForStudios.add("Illumination");
-
         Collections.sort(list);
+        System.out.println(list);
+
+        list.sort(Comparator.comparing(Title::getLaunchDate));
+        System.out.println("Launch Data Ordened: ");
         System.out.println(list);
 
     }
