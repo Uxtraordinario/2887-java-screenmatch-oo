@@ -1,18 +1,35 @@
 package br.com.alura.screenmatch.modelos;
 
+import br.com.alura.screenmatch.exception.ConvertionErrorException;
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable<Title> {
+    @SerializedName("Title")
     public String name;
+    @SerializedName("Year")
     public int launchDate;
     public boolean Media;
     private boolean included;
     private double summarize;
     public int totalSummarize;
+    @SerializedName("Runtime")
     public int minutesOfStream;
     public int yearOfRelease;
 
     public Title(int launchDate, String name, int minutesOfStream) {
         this.launchDate = launchDate;
         this.name = name;
+    }
+
+    public Title(TitleOMDB myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+
+
+        if (myTitleOmdb.year().length() >  4) {
+            throw new ConvertionErrorException("Can't convert year value, cause there's more than 04 numbers");
+         }
+        this.launchDate = Integer.valueOf(myTitleOmdb.year());
+        this.minutesOfStream = Integer.valueOf(myTitleOmdb.runtime().substring(0, 2));
     }
 
     public void setName(String name) {
@@ -27,18 +44,18 @@ public class Title implements Comparable<Title> {
         this.minutesOfStream = minutesOfStream;
     }
 
-    public void showUpValues(){
+    public void showUpValues() {
         System.out.println("Movie Title: " + name);
         System.out.println("Year of launch: " + launchDate);
     }
 
-    public void feedback(double note){
+    public void feedback(double note) {
         summarize += note;
         totalSummarize++;
     }
 
 
-    public double getMedia(){
+    public double getMedia() {
         return summarize / totalSummarize;
     }
 
@@ -66,5 +83,13 @@ public class Title implements Comparable<Title> {
     @Override
     public int compareTo(Title o) {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "name='" + name + '\'' +
+                        ", launchDate=" + launchDate +
+                        ", minutesOfStream=" + minutesOfStream;
     }
 }
