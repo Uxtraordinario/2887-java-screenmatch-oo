@@ -12,11 +12,11 @@ import java.util.LinkedList;
 
 public class MainList extends Principal {
     public static void main(String[] args) {
-        Series lost = new Series(2000, "lost", 50);
+        Series lost = new Series(2000, "lost","Horror",  50);
         lost.feedback(10);
-        Movie myMovie = new Movie("The godfather", 1970, 180);
+        Movie myMovie = new Movie("The godfather","Action" , 1970, 180);
         myMovie.feedback(9);
-        Movie otherMovie = new Movie("Shrek", 2007, 160);
+        Movie otherMovie = new Movie("Shrek","Animation", 2007, 160);
         otherMovie.feedback(7);
 
         Movie m1 = myMovie;

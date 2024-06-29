@@ -6,8 +6,8 @@ public class Series extends Title {
     public int minutesPerEpisode;
 
 
-    public Series(int launchDate, String name, int minutesPerEpisode) {
-        super(launchDate, name, minutesPerEpisode);
+    public Series(int launchDate, String name, String movieGenre , int minutesPerEpisode) {
+        super(launchDate, name, movieGenre, minutesPerEpisode);
     }
 
 

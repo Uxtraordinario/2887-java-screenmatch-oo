@@ -6,19 +6,29 @@ import com.google.gson.annotations.SerializedName;
 public class Title implements Comparable<Title> {
     @SerializedName("Title")
     public String name;
+    @SerializedName("Genre")
+    public String movieGenre;
     @SerializedName("Year")
     public int launchDate;
     public boolean Media;
-    private boolean included;
+   private boolean included;
     private double summarize;
     public int totalSummarize;
     @SerializedName("Runtime")
     public int minutesOfStream;
     public int yearOfRelease;
 
-    public Title(int launchDate, String name, int minutesOfStream) {
+    public Title(int launchDate, String name, String movieGenre, int minutesOfStream) {
         this.launchDate = launchDate;
         this.name = name;
+    }
+
+    public String getMovieGenre() {
+        return movieGenre;
+    }
+
+    public void setMovieGenre(String movieGenre) {
+        this.movieGenre = movieGenre;
     }
 
     public Title(TitleOMDB myTitleOmdb) {
@@ -89,6 +99,7 @@ public class Title implements Comparable<Title> {
     public String toString() {
         return
                 " name =" + name +
+                        " Gender = " +  movieGenre +
                         " launchDate = " + launchDate +
                         " minutesOfStream = " + minutesOfStream;
     }

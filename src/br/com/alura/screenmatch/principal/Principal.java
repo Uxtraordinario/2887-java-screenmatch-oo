@@ -12,7 +12,7 @@ public class Principal {
 
 
     public static void main(String[] args) {
-        Movie myMovie = new Movie("The godfather", 1970, 180);
+        Movie myMovie = new Movie("The godfather", "action", 1972, 180);
         System.out.println("Minutes of Stream: " + myMovie.setMinutesOfStream());
 
 
@@ -30,13 +30,13 @@ public class Principal {
         System.out.println("Total of Feedbacks:" );
         System.out.println(myMovie.Media);
 
-        Series lost = new Series(2000, "lost", 50);
+        Series lost = new Series(2000, "lost","Horror" , 50);
         lost.showUpValues();
         lost.setSeriesSeasons(12);
         lost.setEpisodesPerSeason(12);
         System.out.println("Minutes Duration: " + lost.getMinutesOfStream());
 
-        Movie anotherMovie = new Movie("Superhero Movie", 2002, 180);
+        Movie anotherMovie = new Movie("Toy Story","animation",  2002, 180);
 
         Summarize calculator = new Summarize();
         calculator.include(myMovie);
@@ -53,7 +53,7 @@ public class Principal {
         episode.setTotalViews(300);
         filter.Filter(episode);
 
-        Movie otherMovie = new Movie("Shrek", 2007, 160);
+        Movie otherMovie = new Movie("Shrek", "Animation",  2007, 160);
 
         ArrayList<Movie> movielist = new ArrayList<>();
         movielist.add(myMovie);

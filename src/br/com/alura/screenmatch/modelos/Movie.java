@@ -4,8 +4,8 @@ import br.com.alura.screenmatch.calculo.Categorie;
 public class Movie extends Title implements Categorie {
    private String director;
 
-    public Movie(String name, int launchDate, int minutesOfStream) {
-        super(launchDate, name, minutesOfStream);
+    public Movie(String name, String movieGenre, int launchDate, int minutesOfStream) {
+        super(launchDate, name, movieGenre, minutesOfStream);
         this.setName(name);
     }
 
