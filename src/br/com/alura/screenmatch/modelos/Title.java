@@ -88,8 +88,8 @@ public class Title implements Comparable<Title> {
     @Override
     public String toString() {
         return
-                "name='" + name + '\'' +
-                        ", launchDate=" + launchDate +
-                        ", minutesOfStream=" + minutesOfStream;
+                " name =" + name +
+                        " launchDate = " + launchDate +
+                        " minutesOfStream = " + minutesOfStream;
     }
 }
